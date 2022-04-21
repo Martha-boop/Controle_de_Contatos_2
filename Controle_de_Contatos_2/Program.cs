@@ -1,7 +1,12 @@
+using Controle_de_Contatos_2.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<BancoContext>
+    (Options => Options.UseSqlServer("Data Source=PC\\SQLEXPRESS;Initial Catalog= SistemaCad/21/04;Integrated Security=true"));
 
 
 var app = builder.Build();
