@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<BancoContext>
-    (Options => Options.UseSqlServer("Data Source=PC\\SQLEXPRESS;Initial Catalog= SistemaCad/21/04;Integrated Security=true"));
+    (Options => Options.UseSqlServer("Data Source=PC\\SQLEXPRESS;Initial Catalog= SistemaCad/23/04;Integrated Security=true"));
 
 
 var app = builder.Build();
