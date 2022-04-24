@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<BancoContext>
     (Options => Options.UseSqlServer("Data Source=PC\\SQLEXPRESS;Initial Catalog= SistemaCad/23/04;Integrated Security=true"));
 builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
-
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
