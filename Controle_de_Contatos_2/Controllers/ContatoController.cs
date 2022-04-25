@@ -47,7 +47,7 @@ namespace Controle_de_Contatos_2.Controllers
             }
             catch(System. Exception erro)
             {
-                TempData["MensagemErro"] = "Ops! não conseguimos apagar seu contato!";
+                TempData["MensagemErro"] = $"Ops! não conseguimos apagar o usuario, tente novamente,detalhe do erro: {erro.Message}";
                 return RedirectToAction("index");
             }
         }
