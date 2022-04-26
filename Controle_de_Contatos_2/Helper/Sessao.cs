@@ -17,6 +17,7 @@ namespace Controle_de_Contatos_2.Helper
         public void CriarSessaoDoUsuario(UsuarioModel usuario)
         {
             string valor = JsonContent.SerializeObject(usuario);
+            _httpContext.HttpContext.Session.SetString("SessaoUsuarioLogado", valor);
         }
 
         public void RemoverSessaoDoUsuario()
