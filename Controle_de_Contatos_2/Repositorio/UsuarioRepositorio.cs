@@ -14,6 +14,10 @@ namespace Controle_de_Contatos_2.Repositorio
         {
             return _bancoContext.Usuarios.FirstOrDefault(x => x.Id == id);
         }
+        public UsuarioModel BuscarPorlogin(string login)
+        {
+            return _bancoContext.Usuarios.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper());
+        }
         public List<UsuarioModel> BuscarTodos()
         {
             return _bancoContext.Usuarios.ToList();
@@ -56,5 +60,7 @@ namespace Controle_de_Contatos_2.Repositorio
             return true;
 
         }
+
+        
     }
 }
