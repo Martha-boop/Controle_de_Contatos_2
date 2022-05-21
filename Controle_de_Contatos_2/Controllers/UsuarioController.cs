@@ -1,9 +1,11 @@
-﻿using Controle_de_Contatos_2.Models;
+﻿using Controle_de_Contatos_2.Filters;
+using Controle_de_Contatos_2.Models;
 using Controle_de_Contatos_2.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Controle_de_Contatos_2.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;

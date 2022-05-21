@@ -1,9 +1,11 @@
-﻿using Controle_de_Contatos_2.Models;
+﻿using Controle_de_Contatos_2.Filters;
+using Controle_de_Contatos_2.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace Controle_de_Contatos_2.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class HomeController : Controller
     {
        
